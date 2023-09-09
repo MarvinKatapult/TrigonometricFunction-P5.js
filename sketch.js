@@ -61,7 +61,7 @@ function draw()
 	//Drawing of the Sinewave
 	noFill();
 	beginShape();
-	console.log(sinewave);
+	// console.log(sinewave);
 	for (var i = sinewave.length - 1; i > 0; i--) {
 		
 		sinewave[i].x += XMOVEMENT;
