@@ -1,24 +1,20 @@
 var sinewave = [];
-
 var angle = 0;
 var x = 0;
 var y = 0;
 var xOffset = 300;
 
 const MIDPOINTCIRCLE = 200;
-
 const XMOVEMENT = 1.5;
 const AMPLITUDE = 170;
 
-
-function setup() 
-{
+function setup() {
 	createCanvas(1300, 900);
 	stroke(255);
 }
 
-function draw()
-{
+function draw() {
+
 	frameRate(60);
 	background(55);
 	angle += 0.02;
@@ -27,7 +23,6 @@ function draw()
 	x = MIDPOINTCIRCLE + xOffset; //!______________________________!
 	y = sin(angle) * AMPLITUDE + height/2;
 	sinewave.push({x, y});
-
 
 	// Circle, Lines and Triangle
 	ellipse(MIDPOINTCIRCLE, height/2, AMPLITUDE * 2, AMPLITUDE * 2);
@@ -57,10 +52,10 @@ function draw()
 	line(0, height/2, width, height/2);
 	line(MIDPOINTCIRCLE, 0, MIDPOINTCIRCLE, height);
 
-
 	//Drawing of the Sinewave
 	noFill();
 	beginShape();
+
 	// console.log(sinewave);
 	for (var i = sinewave.length - 1; i > 0; i--) {
 		
@@ -75,4 +70,5 @@ function draw()
 		// console.log(cos(angle) * AMPLITUDE + "\n\n");
 	}
 	endShape();
+	
 }
